@@ -1,4 +1,6 @@
 # webpack-configless-boilerplate
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/axetroy/url-watcher.svg)](https://greenkeeper.io/)
 [![Build Status](https://travis-ci.org/axetroy/webpack-configless-boilerplate.svg?branch=master)](https://travis-ci.org/axetroy/webpack-configless-boilerplate)
 [![Dependency](https://david-dm.org/axetroy/webpack-configless-boilerplate.svg)](https://david-dm.org/axetroy/webpack-configless-boilerplate)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)

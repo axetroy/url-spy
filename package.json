@@ -1,0 +1,25 @@
+{
+  "name": "webpack-configless-boilerplate",
+  "version": "1.0.0",
+  "description": "a lib boilerplate build with webpack-configless",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"configless -e ./index -o ./build --watch",
+    "build": "configless -e ./index -o ./build",
+    "preinstall": "webpack-configless --version"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/axetroy/webpack-configless-boilerplate.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/axetroy/webpack-configless-boilerplate/issues"
+  },
+  "homepage": "https://github.com/axetroy/webpack-configless-boilerplate#readme",
+  "dependencies": {
+    "@axetroy/event-emitter.js": "^1.2.4"
+  }
+}

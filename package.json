@@ -1,12 +1,12 @@
 {
-  "name": "webpack-configless-boilerplate",
-  "version": "1.0.0",
-  "description": "a lib boilerplate build with webpack-configless",
+  "name": "url-spy",
+  "version": "0.1.0",
+  "description": "url spy, listen the url when it change",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"configless -e ./index -o ./build --watch",
-    "build": "configless -e ./index -o ./build",
+    "start":"configless -e ./index -o ./build --library urlSpy --libraryTarget umd --watch",
+    "build": "configless -e ./index -o ./build --library urlSpy --libraryTarget umd",
     "preinstall": "webpack-configless --version"
   },
   "repository": {

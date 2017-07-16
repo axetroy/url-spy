@@ -18,12 +18,12 @@ const { replaceState, pushState } = historyPrototype;
 class History extends EventEmitter {
   constructor() {
     super();
-    this.on('hashchange', (...argv) => {
-      this.emit('urlchange', ...argv);
-    });
-    this.on('pushstate', (...argv) => {
-      this.emit('urlchange', ...argv);
-    });
+    const handler = () => {
+      this.emit('urlchange', ...arguments);
+    };
+    this.on('hashchange', handler);
+    this.on('pushstate', handler);
+    this.on('repalcestate', handler);
     this.hook();
     this.listen();
   }
@@ -37,7 +37,9 @@ class History extends EventEmitter {
         const oldLocation = { ...location };
         replaceState.call(this, ...arguments);
         const newLocation = { ...location };
-        _this.emit('replacestate', oldLocation, newLocation);
+        _this.emit('replacestate', oldLocation, newLocation, {
+          hashChange: false
+        });
       }
     });
     Object.defineProperty(history, 'pushState', {
@@ -47,7 +49,9 @@ class History extends EventEmitter {
         const oldLocation = { ...location };
         pushState.call(this, ...arguments);
         const newLocation = { ...location };
-        _this.emit('pushstate', newLocation, oldLocation);
+        _this.emit('pushstate', newLocation, oldLocation, {
+          hashChange: false
+        });
       }
     });
   }
@@ -61,27 +65,15 @@ class History extends EventEmitter {
     addEventListener(
       'hashchange',
       () => {
-        this.emit('hashchange', { ...location });
+        let oldLocation, newLocation;
+        oldLocation = newLocation = { ...location };
+        this.emit('hashchange', oldLocation, newLocation, { hashChange: true });
       },
       false
     );
   }
 
-  listenUrlChange() {
-    addEventListener(
-      'pushstate',
-      () => {
-        this.emit('pushstate', { ...location });
-      },
-      false
-    );
-  }
+  listenUrlChange() {}
 }
 
-window.urlWatcher = new History();
-
-// Object.defineProperty(window, 'history', {
-//   value: new History(),
-//   configurable: true,
-//   enumerable: true
-// });
+export default new History();

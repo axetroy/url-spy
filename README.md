@@ -1,33 +1,37 @@
-# webpack-configless-boilerplate
-[![Build Status](https://travis-ci.org/axetroy/webpack-configless-boilerplate.svg?branch=master)](https://travis-ci.org/axetroy/webpack-configless-boilerplate)
-[![Dependency](https://david-dm.org/axetroy/webpack-configless-boilerplate.svg)](https://david-dm.org/axetroy/webpack-configless-boilerplate)
+# url-spy
+[![Build Status](https://travis-ci.org/axetroy/url-spy.svg?branch=master)](https://travis-ci.org/axetroy/url-spy)
+[![Dependency](https://david-dm.org/axetroy/url-spy.svg)](https://david-dm.org/axetroy/url-spy)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 [![Prettier](https://img.shields.io/badge/Code%20Style-Prettier-green.svg)](https://github.com/prettier/prettier)
 ![Node](https://img.shields.io/badge/node-%3E=6.0-blue.svg?style=flat-square)
-[![npm version](https://badge.fury.io/js/webpack-configless-boilerplate.svg)](https://badge.fury.io/js/webpack-configless-boilerplate)
+[![npm version](https://badge.fury.io/js/url-spy.svg)](https://badge.fury.io/js/url-spy)
 
-a lib boilerplate build with webpack-configless
+url spy, listen the url when it change
 
 ## Installation
 ```bash
-npm install webpack-configless-boilerplate
+npm install url-spy
 ```
 
 ## Usage
 
 ```javascript
-// usage
+import urlSpy from 'url-spy';
+
+urlSpy.on('urlchange', function(oldLocation,newLocation,meta){
+  
+});
 ```
 
 ## Contributing
 
 ```bash
-git clone https://github.com/axetroy/webpack-configless-boilerplate.git
-cd ./webpack-configless-boilerplate
+git clone https://github.com/axetroy/url-spy.git
+cd ./url-spy
 yarn
 ```
 
-You can flow [Contribute Guide](https://github.com/axetroy/webpack-configless-boilerplate/blob/master/contributing.md)
+You can flow [Contribute Guide](https://github.com/axetroy/url-spy/blob/master/contributing.md)
 
 ## Contributors
 
@@ -38,4 +42,4 @@ You can flow [Contribute Guide](https://github.com/axetroy/webpack-configless-bo
 
 ## License
 
-The [MIT License](https://github.com/axetroy/webpack-configless-boilerplate/blob/master/LICENSE)
+The [MIT License](https://github.com/axetroy/url-spy/blob/master/LICENSE)

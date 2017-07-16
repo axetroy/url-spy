@@ -1,4 +1,5 @@
 # url-spy
+[![Greenkeeper badge](https://badges.greenkeeper.io/axetroy/url-spy.svg)](https://greenkeeper.io/)
 [![Build Status](https://travis-ci.org/axetroy/url-spy.svg?branch=master)](https://travis-ci.org/axetroy/url-spy)
 [![Dependency](https://david-dm.org/axetroy/url-spy.svg)](https://david-dm.org/axetroy/url-spy)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
